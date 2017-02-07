@@ -44,7 +44,7 @@ public class TodoItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             todoItemHolder.tagColor.setBackgroundColor(Color.GREEN);
         }
         if (currentItem.getCurentTag() == TodoItem.Tags.Normal){
-            todoItemHolder.tagColor.setBackgroundColor(Color.argb(0,255,106,0));
+            todoItemHolder.tagColor.setBackgroundColor(context.getColor(R.color.orange));
         }
         if (currentItem.getCurentTag() == TodoItem.Tags.Important){
             todoItemHolder.tagColor.setBackgroundColor(Color.RED);
