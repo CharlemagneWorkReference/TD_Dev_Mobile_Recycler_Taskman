@@ -14,7 +14,7 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
-public class TodoItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+class TodoItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context context;
     private LayoutInflater inflater;
@@ -22,7 +22,7 @@ public class TodoItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     TodoItem currentItem;
     int curPos = 0;
 
-    public TodoItemAdapter(@NonNull Context context, List<TodoItem> list){
+    TodoItemAdapter(@NonNull Context context, List<TodoItem> list){
         this.context = context;
         this.list = list;
         inflater = LayoutInflater.from(context);
@@ -44,7 +44,7 @@ public class TodoItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             todoItemHolder.tagColor.setBackgroundColor(Color.GREEN);
         }
         if (currentItem.getCurentTag() == TodoItem.Tags.Normal){
-            todoItemHolder.tagColor.setBackgroundColor(context.getColor(R.color.orange));
+            todoItemHolder.tagColor.setBackgroundColor(context.getResources().getColor(R.color.orange));
         }
         if (currentItem.getCurentTag() == TodoItem.Tags.Important){
             todoItemHolder.tagColor.setBackgroundColor(Color.RED);
